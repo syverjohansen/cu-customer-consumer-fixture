@@ -1,0 +1,12 @@
+name: customer_segment_models
+version: "1.0.0"
+config-version: 2
+
+profile: customer_segment_models
+model-paths:
+  - models
+
+models:
+  customer_segment_models:
+    +materialized: table
+    +schema: cu_fixture

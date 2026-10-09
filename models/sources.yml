@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: cu_fixture
+    description: Curated customer data supplied by upstream warehouse models.
+    database: learning_hive
+    schema: cu_fixture
+    tables:
+      - name: customer_profiles
+        description: Normalized customer profiles from the upstream project.
+        columns:
+          - name: customer_id
+            description: Normalized customer identifier.
+          - name: email
+            description: Normalized email address.
+          - name: signup_date
+            description: Customer signup date.
+
+models:
+  - name: customer_segments
+    description: Customer lifecycle segments derived from curated profiles.
+    columns:
+      - name: customer_id
+        description: Customer identifier.
+      - name: customer_segment
+        description: Derived lifecycle segment.

@@ -1,0 +1,13 @@
+customer_segment_models:
+  target: local
+  outputs:
+    local:
+      type: postgres
+      host: "{{ env_var('CU_FIXTURE_PG_HOST', 'localhost') }}"
+      port: 5432
+      user: "{{ env_var('CU_FIXTURE_PG_USER') }}"
+      password: "{{ env_var('CU_FIXTURE_PG_PASSWORD') }}"
+      dbname: learning_hive
+      database: learning_hive
+      schema: cu_fixture
+      threads: 1
